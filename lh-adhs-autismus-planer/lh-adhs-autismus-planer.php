@@ -3,7 +3,7 @@
  * Plugin Name: LH ADHS/Autismus Planer
  * Plugin URI: https://lh-ergotherapie.de
  * Description: Multi-Step Frontend-Generator für druckbare ADHS/Autismus-Planer (ohne Datenspeicherung).
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: LH Ergotherapie
  * License: GPL-2.0-or-later
  * Text Domain: lh-adhs-autismus-planer
@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'LH_PLANER_VERSION', '1.0.0' );
+define( 'LH_PLANER_VERSION', '1.0.1' );
 define( 'LH_PLANER_PATH', plugin_dir_path( __FILE__ ) );
 define( 'LH_PLANER_URL', plugin_dir_url( __FILE__ ) );
 

@@ -7,8 +7,10 @@
   font-family: Arial, sans-serif;
 }
 
-.lh-step { display: none; }
-.lh-step.is-active { display: block; }
+/* Progressive enhancement: without JS all steps stay visible and submit works. */
+.lh-step { display: block; margin-bottom: 1rem; }
+.lh-planer.is-enhanced .lh-step { display: none; }
+.lh-planer.is-enhanced .lh-step.is-active { display: block; }
 .lh-stepper__status { font-weight: 700; margin-bottom: 0.75rem; }
 
 .lh-choice {
