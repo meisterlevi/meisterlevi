@@ -1,0 +1,65 @@
+.lh-planer {
+  max-width: 980px;
+  margin: 1.5rem auto;
+  border: 1px solid #d9d9d9;
+  padding: 1.25rem;
+  background: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.lh-step { display: none; }
+.lh-step.is-active { display: block; }
+.lh-stepper__status { font-weight: 700; margin-bottom: 0.75rem; }
+
+.lh-choice {
+  display: block;
+  margin-bottom: 0.5rem;
+  padding: 0.45rem 0.55rem;
+  border: 1px solid #ececec;
+  border-radius: 4px;
+}
+
+.lh-planer__controls { margin-top: 1rem; display: flex; gap: 0.5rem; }
+.lh-button { padding: 0.6rem 0.9rem; border: 1px solid #1f1f1f; background: #fff; cursor: pointer; }
+.lh-button--primary { background: #1f4e79; color: #fff; border-color: #1f4e79; }
+
+.lh-planer__errors { border: 1px solid #b00020; background: #fff2f2; padding: 0.75rem; margin-bottom: 1rem; }
+.lh-planer__result { margin-top: 2rem; }
+.lh-planer__toolbar { margin-bottom: 1rem; }
+.lh-planer__disclaimer { background: #f6f6f6; border-left: 4px solid #444; padding: 0.75rem; }
+.lh-planer__meta { padding: 0.75rem; border: 1px solid #ddd; margin-bottom: 1rem; background: #fafafa; }
+
+.lh-print-page {
+  border: 1px solid #c8c8c8;
+  margin: 1rem 0;
+  min-height: 260mm;
+  padding: 12mm;
+  break-after: page;
+  page-break-after: always;
+}
+.lh-print-page:last-child { break-after: auto; page-break-after: auto; }
+.lh-print-page h2 { margin-top: 0; }
+.lh-grid-table { width: 100%; border-collapse: collapse; }
+.lh-grid-table th, .lh-grid-table td { border: 1px solid #666; padding: 0.4rem; }
+.lh-week th, .lh-week td { width: 14.2%; }
+.lh-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.lh-card { border: 1px dashed #444; min-height: 80mm; padding: 8px; }
+.lh-card-space { height: 22mm; border-bottom: 1px solid #ccc; margin-bottom: 6mm; }
+.lh-breaker-list li { margin-bottom: 0.35rem; }
+.lh-checklist li { margin-bottom: 0.5rem; }
+.lh-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.lh-two-col > div { border: 1px solid #666; padding: 8px; }
+
+.lh-print-page.is-color h2 { color: #1f4e79; }
+.lh-print-page.is-bw h2 { color: #000; }
+
+@media print {
+  body { background: #fff; }
+  .no-print,
+  .lh-planer__form,
+  .lh-planer__errors { display: none !important; }
+  .lh-planer { border: 0; margin: 0; padding: 0; max-width: none; }
+  .lh-planer__result { margin: 0; }
+  .lh-planer__disclaimer { border: 1px solid #666; }
+  .lh-print-page { border: 0; margin: 0; min-height: auto; padding: 10mm; }
+}
